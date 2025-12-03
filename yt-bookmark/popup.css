@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 8px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #f9fafb;
+  min-width: 360px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+  color: #f9fafb;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 11px;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 10px;
+  padding: 8px 10px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.current-video-title {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.current-timestamp {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.field-label {
+  font-size: 11px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  color: #d1d5db;
+}
+
+.input {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  background: #020617;
+  color: #f9fafb;
+  font-size: 12px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #60a5fa;
+}
+
+.input-small {
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 46px;
+  max-height: 120px;
+}
+
+.btn {
+  margin-top: 8px;
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.05s ease, box-shadow 0.05s ease, opacity 0.1s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #f9fafb;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.btn.primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+  box-shadow: none;
+}
+
+.btn.primary:not(:disabled):active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.5);
+}
+
+.status-message {
+  margin-top: 4px;
+  font-size: 11px;
+  min-height: 14px;
+  color: #a5b4fc;
+}
+
+.bookmarks-list {
+  max-height: 260px;
+  overflow-y: auto;
+  margin-top: 4px;
+  padding-right: 3px;
+}
+
+.topic-group {
+  margin-bottom: 6px;
+}
+
+.topic-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 6px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.topic-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topic-pill {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.7);
+}
+
+.topic-count {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.topic-toggle {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.bookmark-items {
+  margin-top: 4px;
+  margin-left: 4px;
+  border-left: 1px solid rgba(51, 65, 85, 0.9);
+  padding-left: 6px;
+}
+
+.bookmark-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px 4px;
+  margin-bottom: 3px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.bookmark-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.bookmark-time-btn {
+  font-size: 11px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1px solid rgba(59, 130, 246, 0.8);
+  background: rgba(15, 23, 42, 0.9);
+  color: #bfdbfe;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bookmark-time-btn:hover {
+  background: rgba(37, 99, 235, 0.15);
+}
+
+.bookmark-note {
+  font-size: 11px;
+  color: #e5e7eb;
+}
+
+.bookmark-meta {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.bookmark-actions {
+  display: flex;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.icon-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 2px 6px;
+  font-size: 10px;
+  cursor: pointer;
+  background: rgba(30, 64, 175, 0.4);
+  color: #e5e7eb;
+}
+
+.icon-btn.delete {
+  background: rgba(185, 28, 28, 0.55);
+}
+
+.icon-btn:hover {
+  filter: brightness(1.1);
+}
+
+.search-input {
+  max-width: 55%;
+}

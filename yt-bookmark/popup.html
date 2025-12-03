@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube Timestamp Bookmarks</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="title">YT Timestamp Bookmarks</div>
+      <div class="subtitle">Save & jump to key moments</div>
+    </header>
+
+    <section id="current-context" class="card">
+      <div class="card-title">Current Video</div>
+      <div id="current-video-title" class="current-video-title">Not on a YouTube video page</div>
+      <div id="current-timestamp" class="current-timestamp"></div>
+    </section>
+
+    <section id="add-bookmark" class="card">
+      <div class="card-title">Add Bookmark</div>
+
+      <label class="field-label">Topic</label>
+      <select id="topic-select" class="input"></select>
+      <input id="new-topic-input" class="input input-small" placeholder="Or type new topic" />
+
+      <label class="field-label">Note (optional)</label>
+      <textarea id="note-input" class="input textarea" rows="2" placeholder="Why is this moment important?"></textarea>
+
+      <button id="save-bookmark-btn" class="btn primary">Save Bookmark</button>
+      <div id="status-message" class="status-message"></div>
+    </section>
+
+    <section id="bookmarks-list-section" class="card">
+      <div class="card-title-row">
+        <span class="card-title">Bookmarks</span>
+        <input id="search-input" class="input input-small search-input" placeholder="Search note/topic..." />
+      </div>
+      <div id="bookmarks-list" class="bookmarks-list"></div>
+    </section>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
